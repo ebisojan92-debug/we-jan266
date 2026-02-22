@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-product',
+  selector: 'product',
   imports: [],
   templateUrl: './product.html',
   styleUrl: './product.css',
 })
 export class ProductComponent {
 
-  name: string = "Sony TV ";
-  price:number = 25000;
+  @Input("name") name!: string;
+  @Input("price") price!:number;
 
 }
