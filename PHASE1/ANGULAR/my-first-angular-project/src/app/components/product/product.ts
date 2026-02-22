@@ -20,7 +20,9 @@ export class ProductComponent {
   messageToParent(): void{
     console.log(" somebody called messageToParent() ");
     this.likeCounter++;
-    this.event1.emit("Hi Parent, I have been liked " +  this.likeCounter + " times today, hope you appreciate it!");
-  }
+    this.event1.emit(this.name + " : Hi Parent, I have been liked " +  this.likeCounter + " times today, hope you appreciate it!");
+  };
+
+
 
 }

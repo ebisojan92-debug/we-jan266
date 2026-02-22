@@ -35,6 +35,6 @@ export class App {
   }
 
   event1Handler(event:any) : void {
-  console.log(`Got an event1 object from child product : ${event} `);
+  console.log(`<IN-APP component> : ${event} `);
   }
 }
