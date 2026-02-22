@@ -33,4 +33,8 @@ export class App {
   sayHi() : void {
     console.log("Hi");
   }
+
+  event1Handler(event:any) : void {
+  console.log(`Got an event1 object from child product : ${event} `);
+  }
 }

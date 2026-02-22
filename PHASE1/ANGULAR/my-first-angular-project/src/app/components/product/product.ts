@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'product',
@@ -12,5 +12,15 @@ export class ProductComponent {
   // parent component (app.html)
   @Input("name") name!: string;
   @Input("price") price!:number;
+
+  @Output() event1 : EventEmitter<string> = new EventEmitter<string>();
+
+  likeCounter = 0;
+
+  messageToParent(): void{
+    console.log(" somebody called messageToParent() ");
+    this.likeCounter++;
+    this.event1.emit("Hi Parent, I have been liked " +  this.likeCounter + " times today, hope you appreciate it!");
+  }
 
 }
